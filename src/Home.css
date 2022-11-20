@@ -1,0 +1,18 @@
+.home {
+    margin: 0 2%;
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+
+.submit {
+    flex: 1;
+    text-align: center;
+}
+.next{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
