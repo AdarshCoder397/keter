@@ -1,7 +1,6 @@
 .page{
     display: grid;
     place-items: center;
-    margin-top: 10%;
 }
 .page_info{
     text-align: center;

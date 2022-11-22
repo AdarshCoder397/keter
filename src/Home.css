@@ -1,18 +1,30 @@
-.home {
+.forum {
     margin: 0 2%;
     display: grid;
     place-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
 }
-
-.submit {
-    flex: 1;
+.page{
+    margin: 0 0 ;
+    height: 100%;
+    width: 100%;
+}
+.submit{
+    flex: 0.5;
+    margin-bottom: 1%;
     text-align: center;
 }
 .next{
     display: none;
+    margin-bottom: 3%;
 }
 .visible{
     display: block;
 }
-
+.box{
+    opacity: 55%;
+    background: transparent;
+}
+.txt{
+    color: antiquewhite;
+}
