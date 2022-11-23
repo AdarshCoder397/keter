@@ -40,7 +40,7 @@ export default function Home() {
   const [address, setAddress] = React.useState("");
   const [date, setDate] = React.useState("");
   const [number, setNumber] = React.useState("");
-  const [otpView, setOtpView] = React.useState(false);
+  const [otpView, setOtpView] = React.useState(true);
   const containerStyles = {
     width: "75%",
     height: "400px",
@@ -156,7 +156,7 @@ export default function Home() {
     );
   } else {
     return (
-      <div className="">
+      <div className="login">
         <Login
           confirmationResult={window.confirmationResult}
           name={name}

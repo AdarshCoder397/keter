@@ -4,8 +4,7 @@ import Menu from "./Menu";
 
 function Login({ name,address,number,date, confirmationResult }) {
   const [inpOtp, setInpOtp] = React.useState("");
-  const [menuView, setMenuView] = React.useState(false);
-
+  const [menuView, setMenuView] = React.useState(true);
   const verifyOtp = (e) => {
     e.preventDefault();
     if (inpOtp.length === 6) {
@@ -17,25 +16,27 @@ function Login({ name,address,number,date, confirmationResult }) {
           setMenuView(true);
         })
         .catch((error) => {
-          // User couldn't sign in (bad verification code?)
-          // ...
+          alert("Wrong OTP!")
         });
+    }
+    if(inpOtp.length !== 6){
+      alert("Enter a valid OTP !")
     }
   };
   if (!menuView) {
     return (
       <div className="page">
         <div className="page_info">
-          <h3>We have sent an OTP to your mobile phone!</h3>
-          <p>Please verify the OTP to login</p>
+          <h3 className="txt">We have sent an OTP to your mobile phone!</h3>
+          <p style={{color:"red"}}>Please verify the OTP to login</p>
         </div>
-        <div className="row g-3 align-items-center">
+        <div className="row g-3 align-items-center inp">
           <div className="col-auto">
-            <label htmlFor="inputPassword6" className="col-form-label">
+            <label htmlFor="inputPassword6" className="col-form-label txt">
               OTP
             </label>
           </div>
-          <div className="col-auto">
+          <div className="col-auto ">
             <input
               type="number"
               id="inputPassword6"

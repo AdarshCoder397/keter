@@ -4,27 +4,38 @@
     place-items: center;
     margin-top: 5%;
 }
-.page{
-    margin: 0 0 ;
+
+.page {
+    margin: 0 0;
     height: 100%;
     width: 100%;
 }
-.submit{
+
+.submit {
     flex: 0.5;
     margin-bottom: 1%;
     text-align: center;
 }
-.next{
+
+.next {
     display: none;
     margin-bottom: 3%;
 }
-.visible{
+
+.visible {
     display: block;
 }
-.box{
+
+.box {
     opacity: 55%;
     background: transparent;
 }
-.txt{
+
+.txt {
     color: antiquewhite;
+}
+
+.login {
+    height: 100%;
+    /* background-color: red; */
 }
