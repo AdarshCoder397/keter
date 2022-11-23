@@ -6,9 +6,8 @@
 }
 
 .page {
-    margin: 0 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
 
 .submit {
@@ -29,10 +28,6 @@
 .box {
     opacity: 55%;
     background: transparent;
-}
-
-.txt {
-    color: antiquewhite;
 }
 
 .login {
