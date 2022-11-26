@@ -40,7 +40,7 @@ export default function Home() {
   const [address, setAddress] = React.useState("");
   const [date, setDate] = React.useState("");
   const [number, setNumber] = React.useState("");
-  const [otpView, setOtpView] = React.useState(false);
+  const [otpView, setOtpView] = React.useState(true);
   const containerStyles = {
     width: "75%",
     height: "400px",
@@ -50,10 +50,10 @@ export default function Home() {
     e.preventDefault();
     generateRecaptcha();
     let appVerifier = window.recaptchaVerifier;
+    setOtpView(true);
     signInWithPhoneNumber(auth, String(countrycode + number), appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
-        setOtpView(true);
       })
       .catch((error) => {
         alert("Enter a Valid number or check your internet connection!");
@@ -92,7 +92,7 @@ export default function Home() {
                 Phone number
               </label>
               <div className="input-group has-validation">
-                <span className="input-group-text box" id="inputGroupPrepend">
+                <span className="input-group-text box txt" id="inputGroupPrepend">
                   +91
                 </span>
                 <input

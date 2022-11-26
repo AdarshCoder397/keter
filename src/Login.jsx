@@ -2,25 +2,23 @@ import React from "react";
 import "./Login.css";
 import Menu from "./Menu";
 
-function Login({ name,address,number,date, confirmationResult }) {
+function Login({ name, address, number, date, confirmationResult }) {
   const [inpOtp, setInpOtp] = React.useState("");
-  const [menuView, setMenuView] = React.useState(false);
+  const [menuView, setMenuView] = React.useState(true);
   const verifyOtp = (e) => {
     e.preventDefault();
     if (inpOtp.length === 6) {
       confirmationResult
         .confirm(inpOtp)
         .then((result) => {
-          // User signed in successfully.
-          // <Redirect to="/Create-Menu" />
           setMenuView(true);
         })
         .catch((error) => {
-          alert("Wrong OTP!")
+          alert("Wrong OTP!");
         });
     }
-    if(inpOtp.length !== 6){
-      alert("Enter a valid OTP !")
+    if (inpOtp.length !== 6) {
+      alert("Enter a valid OTP !");
     }
   };
   if (!menuView) {
@@ -28,7 +26,7 @@ function Login({ name,address,number,date, confirmationResult }) {
       <div className="page">
         <div className="page_info">
           <h3 className="txt">We have sent an OTP to your mobile phone!</h3>
-          <p style={{color:"red"}}>Please verify the OTP to login</p>
+          <p style={{ color: "red" }}>Please verify the OTP to login</p>
         </div>
         <div className="row g-3 align-items-center inp">
           <div className="col-auto">
@@ -36,11 +34,11 @@ function Login({ name,address,number,date, confirmationResult }) {
               OTP
             </label>
           </div>
-          <div className="col-auto ">
+          <div className="col-auto inpt">
             <input
               type="number"
               id="inputPassword6"
-              className="form-control"
+              className="form-control "
               aria-describedby="passwordHelpInline"
               value={inpOtp}
               onChange={(e) => setInpOtp(e.target.value)}

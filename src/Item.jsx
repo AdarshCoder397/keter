@@ -8,10 +8,7 @@ function Item({ name, qty,price }) {
         <div className="order row">
           <h1>{name}</h1>
         </div>
-        <div className="order-data">
-          <p className="order-price">₹{Number(price)*Number(qty).toLocaleString()}</p>
-          <p className="order-qty">{qty.toLocaleString()}Pcs.</p>
-        </div>
+        
       </div>
     </div>
   );
