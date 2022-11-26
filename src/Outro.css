@@ -1,0 +1,14 @@
+.page{
+    color: white;
+    /* text-align: center; */
+}
+.page >h3{
+    margin-top: 15rem;
+    text-align: center;
+}
+.page > h4 {
+    text-align: center;
+}
+.page > h5{
+    text-align: center;
+}

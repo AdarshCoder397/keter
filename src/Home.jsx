@@ -20,13 +20,13 @@ const generateRecaptcha = () => {
 export default function Home() {
   const slides = [
     {
-      url: "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      url: "https://t4.ftcdn.net/jpg/02/75/39/31/360_F_275393147_SA3KtHDTUMoEn6hBbhNiTPeO92gHYgyr.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80",
+      url: "https://5.imimg.com/data5/JX/DJ/LW/SELLER-99007434/catering-services-500x500.jpg",
     },
     {
-      url: "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
+      url: "https://www.wedresearch.net/wp-content/uploads/2018/07/bigrajah-food.jpg",
     },
     {
       url: "https://content.jdmagicbox.com/comp/nellore/y5/9999px861.x861.160915082955.n3y5/catalogue/friends-catering-bhakthavatsala-nagar-nellore-caterers-wojw8krejz.jpg",
@@ -50,20 +50,22 @@ export default function Home() {
     e.preventDefault();
     generateRecaptcha();
     let appVerifier = window.recaptchaVerifier;
-    setOtpView(true);
+    // setOtpView(true);
     signInWithPhoneNumber(auth, String(countrycode + number), appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
+        setOtpView(true)
       })
       .catch((error) => {
         alert("Enter a Valid number or check your internet connection!");
         setOtpView(false);
+        console.log(error)
       });
   };
   if (!otpView) {
     return (
       <div className="page">
-        <div style={containerStyles}>
+        <div style={containerStyles} className={'slide'}>
           <Slider slides={slides} />
         </div>
         <div className="forum">
@@ -139,9 +141,9 @@ export default function Home() {
               <button
                 className={`btn btn-primary next ${
                   Number(number.length) === 10 &&
-                  name != "" &&
-                  address != "" &&
-                  date != "" &&
+                  name !== "" &&
+                  address !== "" &&
+                  date !== "" &&
                   "visible"
                 }`}
                 type="submit"

@@ -27,11 +27,7 @@
 }
 .order-price {
     width: 110px;
-    color: greenyellow;
-}
-.order-qty {
-    width: 200px;
-    color: blueviolet;
+    margin-left: 130px;
 }
 @media only screen and (max-width: 700px) {
     .order-container{
@@ -40,6 +36,10 @@
     .row h1 {
         width: 130px;
     
+    }
+    .order-price {
+        width: 110px;
+        margin-left: 110px;
     }
   }
   @media only screen and (max-width: 500px) {
@@ -50,6 +50,10 @@
         width: 110px;
     
     }
+    .order-price {
+        width: 110px;
+        margin-left: 95px;
+    }
   }
   @media only screen and (max-width: 400px) {
     .order-container{
@@ -59,9 +63,16 @@
         width: 95px;
     
     }
+    .order-price {
+        width: 110px;
+        margin-left: 85px;
+    }
   }
   @media only screen and (max-width: 900px) {
     .order-container{
         width: 80%;
     }
   }
+.red{
+    color: red;
+}

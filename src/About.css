@@ -1,0 +1,15 @@
+.About{
+    margin-top: 10rem;
+    color: wheat;
+}
+.About > h3{
+    color: wheat;
+    margin-top: -15rem;
+    font-weight: bold;
+    text-align: center;
+}
+.image{
+    height: 200px;
+    margin-top: -43rem;
+    border-radius: 50px;
+}

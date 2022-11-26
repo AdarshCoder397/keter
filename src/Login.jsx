@@ -23,7 +23,7 @@ function Login({ name, address, number, date, confirmationResult }) {
   };
   if (!menuView) {
     return (
-      <div className="page">
+      <div className="Login">
         <div className="page_info">
           <h3 className="txt">We have sent an OTP to your mobile phone!</h3>
           <p style={{ color: "red" }}>Please verify the OTP to login</p>
@@ -59,7 +59,7 @@ function Login({ name, address, number, date, confirmationResult }) {
   } else {
     return (
       <div>
-        <Menu name={name} address={address} date={date} number={number} />
+        <Menu usr_name={name} address={address} date={date} number={number} />
       </div>
     );
   }

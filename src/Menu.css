@@ -1,25 +1,24 @@
-.page{
+.Menu{
     /* background-image: url("https://w0.peakpx.com/wallpaper/302/833/HD-wallpaper-blue-purple-waves-shapes-gradient-abstract.jpg"); */
     height: 100%;
     width: 100%;
     background-color: #1a1a1c;
     margin-top: -1rem !important;
     overflow: hidden;
+    display: grid;
+    place-items: center;
 }  
-.items{
-    margin-bottom: 20%;
-}
-.page > h2{
-    margin-top: 3%;
+.Menu > h2{
+    margin-top: 60px;
     color: antiquewhite;
 }
-@media only screen and (max-width: 472px) {
-    .page{
-        width: 110%;
-    }
+.inpName{
+    margin-top: 55px;
 }
-@media only screen and (max-width: 325px) {
-    .page{
-        width: 115%;
-    }
+
+.next-btn{
+    display: none;
+}
+.visible{
+    display: block;
 }
