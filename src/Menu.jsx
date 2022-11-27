@@ -6,7 +6,7 @@ import { db } from "./firebase";
 import Outro from "./Outro";
 
 function Menu({ usr_name, address, date, number }) {
-  const [outroView, setOutroView] = useState(true);
+  const [outroView, setOutroView] = useState(false);
   const [order, setOrder] = useState([]);
   const [name, setName] = useState("");
   const [visible, setVisible] = useState(false);

@@ -1,15 +1,17 @@
 .About{
     margin-top: 10rem;
     color: wheat;
+    display: grid;
+    place-items: center;
 }
 .About > h3{
     color: wheat;
-    margin-top: -15rem;
+    /* margin-top: -15rem; */
     font-weight: bold;
     text-align: center;
 }
 .image{
     height: 200px;
-    margin-top: -43rem;
+    margin-top: 3rem;
     border-radius: 50px;
 }

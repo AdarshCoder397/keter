@@ -40,7 +40,7 @@ export default function Home() {
   const [address, setAddress] = React.useState("");
   const [date, setDate] = React.useState("");
   const [number, setNumber] = React.useState("");
-  const [otpView, setOtpView] = React.useState(true);
+  const [otpView, setOtpView] = React.useState(false);
   const containerStyles = {
     width: "75%",
     height: "400px",
@@ -166,7 +166,6 @@ export default function Home() {
           date={date}
           number={number}
         />
-        <div id="recaptcha-container"></div>
       </div>
     );
   }

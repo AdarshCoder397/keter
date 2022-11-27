@@ -4,7 +4,7 @@ import Menu from "./Menu";
 
 function Login({ name, address, number, date, confirmationResult }) {
   const [inpOtp, setInpOtp] = React.useState("");
-  const [menuView, setMenuView] = React.useState(true);
+  const [menuView, setMenuView] = React.useState(false);
   const verifyOtp = (e) => {
     e.preventDefault();
     if (inpOtp.length === 6) {
